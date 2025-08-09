@@ -18,5 +18,12 @@ public class HomePage  extends BasePage {
         assert isElementDisplayed(title);
         return this;
     }
+
+    @FindBy(xpath = "//a[.=' Log in ']")
+    WebElement loginLink;
+    public LoginPage clickOnLoginLink() {
+        click(loginLink);
+        return new LoginPage(driver);
+    }
 }
 
